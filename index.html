@@ -8,5 +8,29 @@
   </head>
   <body>
     <script src="./dist/iuv.js"></script>
+    <script>
+      let vm = new Iuv({
+        el: "#app",
+        data() {
+          return {
+            // a: 666,
+            colors: ["1", "2"],
+            students: [
+              { name: "小宋", age: "18" },
+              { name: "小马", age: "19" },
+            ],
+          };
+        },
+        // data: {
+        //   a: 123,
+        // },
+      });
+      // vm._data.b = { e: 888 };
+      // vm._data.d = { e: 888 };
+      // vm.colors[1] = "xiaobaibai"; // 数组可以Object.defineProperty
+      // vm.colors.push("3");
+      vm.students[0].name = "小王"; // 赋值在get中不会打印name
+      // console.log(vm._data);
+    </script>
   </body>
 </html>

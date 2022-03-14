@@ -1,4 +1,6 @@
-let a = 1;
-console.log(a);
-
-export default a;
+import { initMixin } from "./init";
+function Iuv(options) {
+  this._init(options);
+}
+initMixin(Iuv);
+export default Iuv;
